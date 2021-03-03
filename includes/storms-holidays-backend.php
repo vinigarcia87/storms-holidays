@@ -152,8 +152,8 @@ if ( !class_exists( 'storms_holidays_backend' ) ) {
 
 		public function add_holidays_admin_page() {
 
-			$page_hook = add_submenu_page( 'options-general.php',
-							__( 'Feriados', 'storms' ), __( 'Feriados', 'storms' ), 'manage_options',
+			$page_hook = add_submenu_page( 'woocommerce',
+							__( 'Feriados', 'storms' ), __( 'Feriados', 'storms' ), 'manage_woocommerce',
 							'storms_holidays', array( $this, 'holidays_admin_page_list' ) );
 
 			/*
@@ -168,7 +168,7 @@ if ( !class_exists( 'storms_holidays_backend' ) ) {
 			// https://metabox.io/create-hidden-admin-page/
 			// https://wordpress.stackexchange.com/a/203156
 			add_submenu_page( null,
-				__( 'Adicionar / Editar Feriado', 'storms' ), __( 'Adicionar / Editar Feriado', 'storms' ), 'manage_options',
+				__( 'Adicionar / Editar Feriado', 'storms' ), __( 'Adicionar / Editar Feriado', 'storms' ), 'manage_woocommerce',
 				'storms_holidays_add_edit', array( $this, 'holidays_admin_page_add_edit' )
 			);
 
